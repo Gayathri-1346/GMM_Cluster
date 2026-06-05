@@ -15,8 +15,12 @@ st.set_page_config(
 st.title(" Customer Personality Segmentation using GMM")
 
 # Load Data
+from pathlib import Path
+
+DATA_FILE = Path(__file__).resolve().parent / "marketing_campaign.csv"
+
 df = pd.read_csv(
-    "marketing_campaign.csv",
+    DATA_FILE,
     sep="\t"
 )
 
